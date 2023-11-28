@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Universe">
+      <UniqueIdentifier>{965F93FE-822C-EE09-AB45-DCB197712398}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Universe.h" />
+    <ClInclude Include="Source\Universe\Application.h">
+      <Filter>Universe</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Core.h">
+      <Filter>Universe</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\EntryPoint.h">
+      <Filter>Universe</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Universe\Application.cpp">
+      <Filter>Universe</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
