@@ -20,11 +20,13 @@
     <ClInclude Include="Source\Universe\Window.h">
       <Filter>Universe</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\UEpch.cpp" />
     <ClCompile Include="Source\Universe\Application.cpp">
       <Filter>Universe</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>

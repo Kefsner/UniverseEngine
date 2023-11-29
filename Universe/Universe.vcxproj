@@ -166,12 +166,14 @@ IF EXIST ..\bin\windows-x86_64\Dist\Universe\Universe.dll\ (xcopy /Q /E /Y /I ..
     <ClInclude Include="Source\Universe\Core.h" />
     <ClInclude Include="Source\Universe\EntryPoint.h" />
     <ClInclude Include="Source\Universe\Window.h" />
+    <ClInclude Include="Source\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\UEpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Source\Universe\Application.cpp" />
+    <ClCompile Include="Source\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Vendor\GLFW\GLFW.vcxproj">
