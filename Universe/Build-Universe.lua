@@ -2,13 +2,16 @@ project "Universe"
     kind "SharedLib"
 	language "C++"
     cppdialect "C++latest"
-    
+
     files {"Source/**.cpp", "Source/**.h"}
 
     includedirs {"Source"}
 
     targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
     objdir ("../bin/int/" .. OutputDir .. "/%{prj.name}")
+
+    pchheader "uepch.h"
+    pchsource "Source/uepch.cpp"
 
 	filter "system:windows"
         systemversion "latest"

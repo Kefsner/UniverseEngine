@@ -1,5 +1,5 @@
+#include "uepch.h"
 #include "Application.h"
-#include <iostream>
 
 namespace Universe {
 

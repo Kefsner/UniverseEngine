@@ -1,5 +1,5 @@
+#include"uepch.h"
 #include "Universe.h"
-#include <iostream>
 
 class Sandbox : public Universe::Application
 {
