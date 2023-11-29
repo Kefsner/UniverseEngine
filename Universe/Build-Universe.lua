@@ -5,7 +5,16 @@ project "Universe"
 
     files {"Source/**.cpp", "Source/**.h"}
 
-    includedirs {"Source"}
+    IncludeDir = {}
+    IncludeDir["GLFW"] = "Vendor/GLFW/include"
+
+    includedirs {"Source", "%{IncludeDir.GLFW}"}
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
+    }
 
     targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
     objdir ("../bin/int/" .. OutputDir .. "/%{prj.name}")

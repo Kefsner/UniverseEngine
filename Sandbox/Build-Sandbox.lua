@@ -17,21 +17,18 @@ project "Sandbox"
 
     filter "system:windows"
 		systemversion "latest"
-        defines "UE_PLATFORM_WINDOWS"
+		defines {"UE_PLATFORM_WINDOWS"}
 
 	filter "configurations:Debug"
-		defines "UE_DEBUG"
         runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
-		defines "UE_RELEASE"
         runtime "Release"
 		optimize "On"
         symbols "On"
 
     filter "configurations:Dist"
-        defines "UE_DIST"
         runtime "Release"
         optimize "On"
         symbols "Off"

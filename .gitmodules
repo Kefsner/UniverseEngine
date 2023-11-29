@@ -1,0 +1,3 @@
+[submodule "Universe/Vendor/GLFW"]
+	path = Universe/Vendor/GLFW
+	url = https://github.com/Kefsner/glfw
