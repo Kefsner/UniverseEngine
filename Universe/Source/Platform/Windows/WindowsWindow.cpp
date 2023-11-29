@@ -35,6 +35,9 @@ namespace Universe {
 		glfwMakeContextCurrent(m_Window);
 
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+
+		//// Set GLFW Callbacks
+		//glfwSetWindowSizeCallback(m_Window);
 	}
 
 	WindowsWindow::~WindowsWindow()

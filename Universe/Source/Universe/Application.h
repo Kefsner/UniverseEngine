@@ -12,6 +12,9 @@ namespace Universe {
 		~Application();
 
 		void Run();
+		const char* e = "Event";
+
+		void OnEvent(const char* e);
 
 	private:
 		std::unique_ptr<Window> m_Window;
