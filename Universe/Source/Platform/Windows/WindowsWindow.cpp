@@ -12,16 +12,6 @@ namespace Universe {
 
 	WindowsWindow::WindowsWindow(const WindowProps& props)
 	{
-		Init(props);
-	}
-
-	WindowsWindow::~WindowsWindow()
-	{
-		ShutDown();
-	}
-
-	void WindowsWindow::Init(const WindowProps& props)
-	{
 		m_Data.Title = props.Title;
 		m_Data.Width = props.Width;
 		m_Data.Height = props.Height;
@@ -41,13 +31,13 @@ namespace Universe {
 		{
 			std::cout << "Failed to create a window" << std::endl;
 		}
-		
+
 		glfwMakeContextCurrent(m_Window);
 
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 	}
 
-	void WindowsWindow::ShutDown()
+	WindowsWindow::~WindowsWindow()
 	{
 		// This is not terminating glfw because we could have more than one window
 		glfwDestroyWindow(m_Window);

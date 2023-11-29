@@ -16,7 +16,7 @@ namespace Universe {
 	{
 		while (m_IsRunning)
 		{
-			m_Window->OnUpdate();
+			m_Window->OnUpdate( );
 		}
 	}
 }

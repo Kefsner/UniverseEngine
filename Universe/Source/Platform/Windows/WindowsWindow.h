@@ -17,9 +17,6 @@ namespace Universe {
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
 	private:
-		virtual void Init(const WindowProps& props);
-		virtual void ShutDown();
-
 		GLFWwindow* m_Window;
 
 		struct WindowData
