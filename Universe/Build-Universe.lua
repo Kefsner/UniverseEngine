@@ -7,20 +7,22 @@ project "Universe"
 
     IncludeDir = {}
     IncludeDir["GLFW"] = "Vendor/GLFW/include"
+    IncludeDir["glad"] = "Vendor/glad/include"
 
-    includedirs {"Source", "%{IncludeDir.GLFW}"}
+    includedirs {"Source", "%{IncludeDir.GLFW}", "%{IncludeDir.glad}"}
 
     links
     {
         "GLFW",
-        "opengl32.lib"
+        "opengl32.lib",
+        "glad"
     }
 
     targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
     objdir ("../bin/int/" .. OutputDir .. "/%{prj.name}")
 
-    pchheader "uepch.h"
-    pchsource "Source/uepch.cpp"
+    pchheader "UEpch.h"
+    pchsource "Source/UEpch.cpp"
 
 	filter "system:windows"
         systemversion "latest"

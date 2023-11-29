@@ -1,3 +1,4 @@
+// Main application header file.
 #pragma once
 #include "Core.h"
 

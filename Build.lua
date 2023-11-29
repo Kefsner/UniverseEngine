@@ -11,6 +11,7 @@ OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 
 include "Universe/Build-Universe.lua"
 
-include "Sandbox/Build-Sandbox.lua"
-
 include "Universe/Vendor/GLFW/Build-GLFW.lua"
+include "Universe/Vendor/glad/Build-glad.lua"
+
+include "Sandbox/Build-Sandbox.lua"

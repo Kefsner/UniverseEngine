@@ -6,6 +6,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\UEpch.h" />
     <ClInclude Include="Source\Universe.h" />
     <ClInclude Include="Source\Universe\Application.h">
       <Filter>Universe</Filter>
@@ -16,12 +17,14 @@
     <ClInclude Include="Source\Universe\EntryPoint.h">
       <Filter>Universe</Filter>
     </ClInclude>
-    <ClInclude Include="Source\uepch.h" />
+    <ClInclude Include="Source\Universe\Window.h">
+      <Filter>Universe</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\UEpch.cpp" />
     <ClCompile Include="Source\Universe\Application.cpp">
       <Filter>Universe</Filter>
     </ClCompile>
-    <ClCompile Include="Source\uepch.cpp" />
   </ItemGroup>
 </Project>

@@ -11,7 +11,6 @@ public:
 
 	~Sandbox()
 	{
-		std::cout << "Destructed Sandbox!" << std::endl;
 	}
 };
 
