@@ -166,6 +166,10 @@ IF EXIST ..\bin\windows-x86_64\Dist\Universe\Universe.dll\ (xcopy /Q /E /Y /I ..
     <ClInclude Include="Source\Universe\Application.h" />
     <ClInclude Include="Source\Universe\Core.h" />
     <ClInclude Include="Source\Universe\EntryPoint.h" />
+    <ClInclude Include="Source\Universe\Events\ApplicationEvent.h" />
+    <ClInclude Include="Source\Universe\Events\Event.h" />
+    <ClInclude Include="Source\Universe\Events\KeyEvent.h" />
+    <ClInclude Include="Source\Universe\Events\MouseEvent.h" />
     <ClInclude Include="Source\Universe\Window.h" />
   </ItemGroup>
   <ItemGroup>

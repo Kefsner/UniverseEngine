@@ -16,6 +16,8 @@ namespace Universe {
 		inline unsigned int GetWidth() const override { return m_Data.Width; }
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
+		void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
+
 	private:
 		GLFWwindow* m_Window;
 
@@ -24,6 +26,8 @@ namespace Universe {
 			std::string Title;
 			unsigned int Width;
 			unsigned int Height;
+
+			EventCallbackFn EventCallback;
 		};
 
 		WindowData m_Data;

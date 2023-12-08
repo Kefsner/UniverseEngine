@@ -1,13 +1,14 @@
 #include "UEpch.h"
 #include "Application.h"
-#include <functional>
 
 namespace Universe {
+
+#define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
 
 	Application::Application()
 	{
 		m_Window = std::unique_ptr<Window>(Window::Create());
-		//m_Window->SetEventCallback(std::bind(&Application::OnEvent, this, std::placeholders::_1))
+		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 	}
 
 	Application::~Application()
@@ -18,12 +19,19 @@ namespace Universe {
 	{
 		while (m_IsRunning)
 		{
-			m_Window->OnUpdate( );
+			m_Window->OnUpdate();
 		}
 	}
 
-	void Application::OnEvent(const char* e)
+	void Application::OnEvent(Event& e)
 	{
-		std::cout << "Event" << std::endl;
+		EventDispatcher dispatcher(e);
+		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
+	}
+
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
+		m_IsRunning = false;
+		return true;
 	}
 }

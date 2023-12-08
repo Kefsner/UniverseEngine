@@ -3,6 +3,7 @@
 #pragma once
 #include "UEpch.h"
 #include "Core.h"
+#include "Universe/Events/Event.h"
 
 namespace Universe {
 
@@ -25,12 +26,16 @@ namespace Universe {
 	class UE_API Window
 	{
 	public:
+		using EventCallbackFn = std::function<void(Event&)>;
+
 		virtual ~Window() {}
 
 		virtual void OnUpdate() = 0;
 
 		virtual unsigned int GetWidth() const = 0;
 		virtual unsigned int GetHeight() const = 0;
+
+		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 
 		// Must be implemented per platform
 		static Window* Create(const WindowProps& props = WindowProps());

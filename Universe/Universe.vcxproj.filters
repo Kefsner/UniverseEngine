@@ -29,6 +29,10 @@
     <ClInclude Include="Source\Universe\Window.h">
       <Filter>Universe</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Universe\Events\Event.h" />
+    <ClInclude Include="Source\Universe\Events\ApplicationEvent.h" />
+    <ClInclude Include="Source\Universe\Events\KeyEvent.h" />
+    <ClInclude Include="Source\Universe\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Platform\Windows\WindowsWindow.cpp">
