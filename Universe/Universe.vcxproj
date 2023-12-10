@@ -160,6 +160,7 @@ IF EXIST ..\bin\windows-x86_64\Dist\Universe\Universe.dll\ (xcopy /Q /E /Y /I ..
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Universe\Layer.h" />
     <ClInclude Include="Source\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="Source\UEpch.h" />
     <ClInclude Include="Source\Universe.h" />
@@ -170,14 +171,17 @@ IF EXIST ..\bin\windows-x86_64\Dist\Universe\Universe.dll\ (xcopy /Q /E /Y /I ..
     <ClInclude Include="Source\Universe\Events\Event.h" />
     <ClInclude Include="Source\Universe\Events\KeyEvent.h" />
     <ClInclude Include="Source\Universe\Events\MouseEvent.h" />
+    <ClInclude Include="Source\Universe\LayerStack.h" />
     <ClInclude Include="Source\Universe\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Universe\Layer.cpp" />
     <ClCompile Include="Source\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="Source\UEpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="Source\Universe\Application.cpp" />
+    <ClCompile Include="Source\Universe\LayerStack.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Vendor\GLFW\GLFW.vcxproj">

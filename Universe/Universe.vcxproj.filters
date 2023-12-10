@@ -33,6 +33,8 @@
     <ClInclude Include="Source\Universe\Events\ApplicationEvent.h" />
     <ClInclude Include="Source\Universe\Events\KeyEvent.h" />
     <ClInclude Include="Source\Universe\Events\MouseEvent.h" />
+    <ClInclude Include="Source\Universe\Layer.h" />
+    <ClInclude Include="Source\Universe\LayerStack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Platform\Windows\WindowsWindow.cpp">
@@ -42,5 +44,7 @@
     <ClCompile Include="Source\Universe\Application.cpp">
       <Filter>Universe</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Universe\Layer.cpp" />
+    <ClCompile Include="Source\Universe\LayerStack.cpp" />
   </ItemGroup>
 </Project>
