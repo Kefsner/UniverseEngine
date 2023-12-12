@@ -13,5 +13,6 @@ include "Universe/Build-Universe.lua"
 
 include "Universe/Vendor/GLFW/Build-GLFW.lua"
 include "Universe/Vendor/glad/Build-glad.lua"
+include "Universe/Vendor/imgui/Build-imgui.lua"
 
 include "Sandbox/Build-Sandbox.lua"
