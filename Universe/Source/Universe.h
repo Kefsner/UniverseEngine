@@ -2,5 +2,6 @@
 #pragma once
 
 #include "Universe/Application.h"
+#include "Universe/Log.h"
 
 #include "Universe/EntryPoint.h"

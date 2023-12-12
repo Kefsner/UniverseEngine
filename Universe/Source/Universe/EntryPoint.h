@@ -6,11 +6,16 @@
 
 int main()
 {
-	auto app = Universe::CreateApplication();
+	Universe::Log::Init();
 
-	app->Run();
+	UE_CORE_INFO("Creating Universe!");
+	auto universe = Universe::CreateApplication();
 
-	delete app;
+	UE_CORE_INFO("Running Universe!");
+	universe->Run();
+
+	UE_CORE_INFO("Closing Universe!");
+	delete universe;
 
 	return 0;
 }

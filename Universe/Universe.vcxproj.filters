@@ -15,6 +15,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Platform\Windows\WindowsInput.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -41,19 +44,26 @@
     <ClInclude Include="Source\Universe\Events\MouseEvent.h">
       <Filter>Universe\Events</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Universe\Input.h">
+      <Filter>Universe</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Universe\Layer.h">
       <Filter>Universe</Filter>
     </ClInclude>
     <ClInclude Include="Source\Universe\LayerStack.h">
       <Filter>Universe</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Universe\Log.h">
+      <Filter>Universe</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Universe\Window.h">
       <Filter>Universe</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Universe\Input.h" />
-    <ClInclude Include="Source\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Platform\Windows\WindowsInput.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
@@ -67,6 +77,8 @@
     <ClCompile Include="Source\Universe\LayerStack.cpp">
       <Filter>Universe</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Platform\Windows\WindowsInput.cpp" />
+    <ClCompile Include="Source\Universe\Log.cpp">
+      <Filter>Universe</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

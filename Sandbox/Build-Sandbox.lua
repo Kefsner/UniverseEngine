@@ -5,7 +5,7 @@ project "Sandbox"
 
 	files { "Source/**.cpp", "Source/**.h" }
 
-	includedirs {"Source", "../Universe/Source"}
+	includedirs {"Source", "../Universe/Source", "../Universe/Vendor/spdlog/include"}
 
 	links
 	{

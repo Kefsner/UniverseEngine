@@ -4,3 +4,6 @@
 [submodule "Universe/Vendor/imgui"]
 	path = Universe/Vendor/imgui
 	url = https://github.com/Kefsner/imgui
+[submodule "Universe/Vendor/spdlog"]
+	path = Universe/Vendor/spdlog
+	url = https://github.com/Kefsner/spdlog

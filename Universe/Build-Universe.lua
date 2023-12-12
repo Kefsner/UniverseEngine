@@ -9,8 +9,15 @@ project "Universe"
     IncludeDir["GLFW"] = "Vendor/GLFW/include"
     IncludeDir["glad"] = "Vendor/glad/include"
     IncludeDir["ImGui"] = "Vendor/imgui"
+    IncludeDir["spdlog"] = "Vendor/spdlog/include"
 
-    includedirs {"Source", "%{IncludeDir.GLFW}", "%{IncludeDir.glad}" , "%{IncludeDir.ImGui}"}
+    includedirs {
+        "Source",
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.glad}" ,
+        "%{IncludeDir.ImGui}",
+        "%{IncludeDir.spdlog}"
+    }
 
     links
     {
