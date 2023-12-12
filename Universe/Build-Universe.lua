@@ -3,20 +3,27 @@ project "Universe"
 	language "C++"
     cppdialect "C++latest"
 
-    files {"Source/**.cpp", "Source/**.h"}
+    files {
+        "Source/**.cpp",
+        "Source/**.h",
+        "Vendor/glm/glm/**.hpp",
+        "Vendor/glm/glm/**.inl"
+    }
 
     IncludeDir = {}
     IncludeDir["GLFW"] = "Vendor/GLFW/include"
     IncludeDir["glad"] = "Vendor/glad/include"
     IncludeDir["ImGui"] = "Vendor/imgui"
     IncludeDir["spdlog"] = "Vendor/spdlog/include"
+    IncludeDir["glm"] = "Vendor/glm"
 
     includedirs {
         "Source",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.glad}" ,
         "%{IncludeDir.ImGui}",
-        "%{IncludeDir.spdlog}"
+        "%{IncludeDir.spdlog}",
+        "%{IncludeDir.glm}"
     }
 
     links

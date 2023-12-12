@@ -2,6 +2,7 @@
 #include "Application.h"
 #include "Input.h"
 #include "Log.h"
+#include "glm/glm.hpp"
 
 namespace Universe {
 
