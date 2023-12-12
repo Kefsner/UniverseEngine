@@ -172,9 +172,11 @@ IF EXIST ..\bin\windows-x86_64\Dist\Universe\Universe.dll\ (xcopy /Q /E /Y /I ..
     <ClInclude Include="Source\Universe\Events\KeyEvent.h" />
     <ClInclude Include="Source\Universe\Events\MouseEvent.h" />
     <ClInclude Include="Source\Universe\Input.h" />
+    <ClInclude Include="Source\Universe\KeyCodes.h" />
     <ClInclude Include="Source\Universe\Layer.h" />
     <ClInclude Include="Source\Universe\LayerStack.h" />
     <ClInclude Include="Source\Universe\Log.h" />
+    <ClInclude Include="Source\Universe\MouseButtonCodes.h" />
     <ClInclude Include="Source\Universe\Window.h" />
   </ItemGroup>
   <ItemGroup>

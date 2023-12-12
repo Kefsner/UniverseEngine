@@ -1,6 +1,7 @@
 #include "UEpch.h"
 #include "Application.h"
 #include "Input.h"
+#include "Log.h"
 
 namespace Universe {
 
@@ -8,6 +9,8 @@ namespace Universe {
 
 	Application::Application()
 	{
+		s_Instance = this;
+
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(UE_BIND_EVENT_FN(OnEvent));
 	}

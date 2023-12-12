@@ -11,12 +11,12 @@ public:
 
 	void OnUpdate() override
 	{
-		std::cout << "ExampleLayer::Update" << std::endl;
+		if (Universe::Input::IsKeyPressed(UE_KEY_TAB))
+			UE_TRACE("Tab key is pressed (poll)!");
 	}
 
 	void OnEvent(Universe::Event& event) override
 	{
-		std::cout << "ExampleLayer::Event" << std::endl;
 	}
 };
 

@@ -1,5 +1,6 @@
 #include "UEpch.h"
 #include "WindowsInput.h"
+#include "Universe/Log.h"
 
 #include "Universe/Application.h"
 #include <GLFW/glfw3.h>

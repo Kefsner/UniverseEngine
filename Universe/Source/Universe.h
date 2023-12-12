@@ -2,6 +2,11 @@
 #pragma once
 
 #include "Universe/Application.h"
+#include "Universe/Layer.h"
 #include "Universe/Log.h"
+
+#include "Universe/Input.h"
+#include "Universe/KeyCodes.h"
+#include "Universe/MouseButtonCodes.h"
 
 #include "Universe/EntryPoint.h"

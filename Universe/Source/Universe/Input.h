@@ -4,7 +4,7 @@
 
 namespace Universe {
 
-	class Input
+	class UE_API Input
 	{
 	public:
 		inline static bool IsKeyPressed(int keycode) { return s_Instance->IsKeyPressedImpl(keycode); }
