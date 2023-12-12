@@ -18,6 +18,7 @@ namespace Universe {
 
 		void SetEventCallback(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 
+		inline void* GetNativeWindow() const override { return m_Window; }
 	private:
 		GLFWwindow* m_Window;
 

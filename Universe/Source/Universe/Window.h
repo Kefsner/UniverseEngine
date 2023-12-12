@@ -37,6 +37,8 @@ namespace Universe {
 
 		virtual void SetEventCallback(const EventCallbackFn& callback) = 0;
 
+		virtual void* GetNativeWindow() const = 0;
+
 		// Must be implemented per platform
 		static Window* Create(const WindowProps& props = WindowProps());
 	};

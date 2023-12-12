@@ -10,6 +10,9 @@
     <Filter Include="Universe">
       <UniqueIdentifier>{965F93FE-822C-EE09-AB45-DCB197712398}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Universe\Events">
+      <UniqueIdentifier>{BAE63A23-2672-A8E7-2F83-2BDC9B8D04E8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Platform\Windows\WindowsWindow.h">
@@ -26,15 +29,29 @@
     <ClInclude Include="Source\Universe\EntryPoint.h">
       <Filter>Universe</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Universe\Events\ApplicationEvent.h">
+      <Filter>Universe\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Events\Event.h">
+      <Filter>Universe\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Events\KeyEvent.h">
+      <Filter>Universe\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Events\MouseEvent.h">
+      <Filter>Universe\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Layer.h">
+      <Filter>Universe</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\LayerStack.h">
+      <Filter>Universe</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Universe\Window.h">
       <Filter>Universe</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Universe\Events\Event.h" />
-    <ClInclude Include="Source\Universe\Events\ApplicationEvent.h" />
-    <ClInclude Include="Source\Universe\Events\KeyEvent.h" />
-    <ClInclude Include="Source\Universe\Events\MouseEvent.h" />
-    <ClInclude Include="Source\Universe\Layer.h" />
-    <ClInclude Include="Source\Universe\LayerStack.h" />
+    <ClInclude Include="Source\Universe\Input.h" />
+    <ClInclude Include="Source\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Platform\Windows\WindowsWindow.cpp">
@@ -44,7 +61,12 @@
     <ClCompile Include="Source\Universe\Application.cpp">
       <Filter>Universe</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Universe\Layer.cpp" />
-    <ClCompile Include="Source\Universe\LayerStack.cpp" />
+    <ClCompile Include="Source\Universe\Layer.cpp">
+      <Filter>Universe</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Universe\LayerStack.cpp">
+      <Filter>Universe</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
 </Project>

@@ -1,3 +1,6 @@
 [submodule "Universe/Vendor/GLFW"]
 	path = Universe/Vendor/GLFW
 	url = https://github.com/Kefsner/glfw
+[submodule "Universe/Vendor/imgui"]
+	path = Universe/Vendor/imgui
+	url = https://github.com/Kefsner/imgui

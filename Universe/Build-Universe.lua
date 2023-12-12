@@ -8,14 +8,16 @@ project "Universe"
     IncludeDir = {}
     IncludeDir["GLFW"] = "Vendor/GLFW/include"
     IncludeDir["glad"] = "Vendor/glad/include"
+    IncludeDir["ImGui"] = "Vendor/imgui"
 
-    includedirs {"Source", "%{IncludeDir.GLFW}", "%{IncludeDir.glad}"}
+    includedirs {"Source", "%{IncludeDir.GLFW}", "%{IncludeDir.glad}" , "%{IncludeDir.ImGui}"}
 
     links
     {
         "GLFW",
         "opengl32.lib",
-        "glad"
+        "glad",
+        "ImGui"
     }
 
     targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")

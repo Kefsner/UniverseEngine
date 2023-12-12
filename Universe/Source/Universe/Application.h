@@ -16,12 +16,17 @@ namespace Universe {
 
 		void Run();
 
+		inline Window& GetWindow() { return *m_Window; }
+		static Application& Get() { return *s_Instance; }
+
 		void OnEvent(Event& e);
 
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* layer);
 
 	private:
+		static Application* s_Instance;
+
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
