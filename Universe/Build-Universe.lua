@@ -1,7 +1,11 @@
 project "Universe"
-    kind "SharedLib"
+    kind "StaticLib"
 	language "C++"
     cppdialect "C++latest"
+    staticruntime "on"
+
+    targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
+    objdir ("../bin/int/" .. OutputDir .. "/%{prj.name}")
 
     files {
         "Source/**.cpp",
@@ -11,18 +15,18 @@ project "Universe"
     }
 
     IncludeDir = {}
+    IncludeDir["spdlog"] = "Vendor/spdlog/include"
     IncludeDir["GLFW"] = "Vendor/GLFW/include"
     IncludeDir["glad"] = "Vendor/glad/include"
     IncludeDir["ImGui"] = "Vendor/imgui"
-    IncludeDir["spdlog"] = "Vendor/spdlog/include"
     IncludeDir["glm"] = "Vendor/glm"
 
     includedirs {
         "Source",
+        "%{IncludeDir.spdlog}",
         "%{IncludeDir.GLFW}",
         "%{IncludeDir.glad}" ,
         "%{IncludeDir.ImGui}",
-        "%{IncludeDir.spdlog}",
         "%{IncludeDir.glm}"
     }
 
@@ -34,33 +38,26 @@ project "Universe"
         "ImGui"
     }
 
-    targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
-    objdir ("../bin/int/" .. OutputDir .. "/%{prj.name}")
-
     pchheader "UEpch.h"
     pchsource "Source/UEpch.cpp"
 
 	filter "system:windows"
         systemversion "latest"
-		defines {"UE_PLATFORM_WINDOWS", "UE_BUILD_DLL"}
-        postbuildcommands
-		{
-			"{MKDIR} ../bin/" .. OutputDir .. "/Sandbox",
-			"{COPY} %{cfg.buildtarget.relpath} ../bin/" .. OutputDir .. "/Sandbox"
-		}
+		defines { "UE_PLATFORM_WINDOWS" }
+
+
 
 	filter "configurations:Debug"
 		defines "UE_DEBUG"
         runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
 		defines "UE_RELEASE"
         runtime "Release"
-		optimize "On"
+		optimize "on"
 
     filter "configurations:Dist"
         defines "UE_DIST"
         runtime "Release"
-        optimize "On"
-        symbols "Off"
+        optimize "on"

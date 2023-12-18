@@ -13,8 +13,14 @@
     <Filter Include="Source\Universe">
       <UniqueIdentifier>{D6E0B35D-426C-2122-4B7D-A416B7877D22}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Universe\Core">
+      <UniqueIdentifier>{EEFAC85F-DA89-5229-83A8-66246F1663CF}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source\Universe\Events">
       <UniqueIdentifier>{FA7F157B-E679-3ECD-CFE6-D4DDBB7FA439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Universe\ImGui">
+      <UniqueIdentifier>{801E5359-EC8A-0E54-B57E-A6B121AA30BC}</UniqueIdentifier>
     </Filter>
     <Filter Include="Vendor">
       <UniqueIdentifier>{935FDCD7-7F01-07AE-68BC-1A0254FD8DFE}</UniqueIdentifier>
@@ -54,8 +60,14 @@
     <ClInclude Include="Source\Universe\Application.h">
       <Filter>Source\Universe</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Universe\Core.h">
-      <Filter>Source\Universe</Filter>
+    <ClInclude Include="Source\Universe\Core\Assert.h">
+      <Filter>Source\Universe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Core\Base.h">
+      <Filter>Source\Universe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Core\PlatformDetection.h">
+      <Filter>Source\Universe\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Universe\EntryPoint.h">
       <Filter>Source\Universe</Filter>
@@ -71,6 +83,9 @@
     </ClInclude>
     <ClInclude Include="Source\Universe\Events\MouseEvent.h">
       <Filter>Source\Universe\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\ImGui\ImGuiLayer.h">
+      <Filter>Source\Universe\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="Source\Universe\Input.h">
       <Filter>Source\Universe</Filter>
@@ -1354,6 +1369,12 @@
     </ClCompile>
     <ClCompile Include="Source\Universe\Application.cpp">
       <Filter>Source\Universe</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Universe\ImGui\ImGuiBuild.cpp">
+      <Filter>Source\Universe\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Universe\ImGui\ImGuiLayer.cpp">
+      <Filter>Source\Universe\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="Source\Universe\Layer.cpp">
       <Filter>Source\Universe</Filter>

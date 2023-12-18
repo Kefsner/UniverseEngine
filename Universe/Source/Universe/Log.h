@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Core.h"
+#include "Universe/Core/PlatformDetection.h"
 #include "spdlog/spdlog.h"
 
 namespace Universe {

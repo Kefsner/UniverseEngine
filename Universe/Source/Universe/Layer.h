@@ -1,10 +1,10 @@
 #pragma once
-#include "Universe/Core.h"
+#include "Universe/Core/PlatformDetection.h"
 #include "Universe/Events/Event.h"
 
 namespace Universe {
 
-	class UE_API Layer
+	class Layer
 	{
 	public:
 		Layer(const std::string& name = "Layer");
@@ -13,6 +13,7 @@ namespace Universe {
 		virtual void OnAttach() {}
 		virtual void OnDetach() {}
 		virtual void OnUpdate() {}
+		virtual void OnImGuiRender() {}
 		virtual void OnEvent(Event& event) {}
 
 		inline const std::string& GetName() const { return m_DebugName; }

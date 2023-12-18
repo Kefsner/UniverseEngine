@@ -6,6 +6,11 @@ workspace "Universe"
 	-- Build options for MSVC
 	filter "system:windows"
 		buildoptions { "/std:c++latest", "/Zc:__cplusplus" }
+		defines 
+		{
+			"_SILENCE_STDEXT_ARR_ITERS_DEPRECATION_WARNING",  -- Silence spdlog warning about stdext
+			"_CRT_SECURE_NO_WARNINGS" -- Silence imgui warning about sscanf, strcpy and strcat
+		}
 
 OutputDir = "%{cfg.system}-%{cfg.architecture}/%{cfg.buildcfg}"
 

@@ -1,13 +1,13 @@
 #pragma once
 
-#include "Universe/Core.h"
+#include "Universe/Core/PlatformDetection.h"
 #include "Universe/Layer.h"
 
 #include <vector>
 
 namespace Universe {
 
-	class UE_API LayerStack
+	class LayerStack
 	{
 	public:
 		LayerStack();
@@ -23,6 +23,6 @@ namespace Universe {
 
 	private:
 		std::vector<Layer*> m_Layers;
-		std::vector<Layer*>::iterator m_LayerInsert;
+		unsigned int m_LayerInsertIndex = 0;
 	};
 }

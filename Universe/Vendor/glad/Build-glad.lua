@@ -1,6 +1,7 @@
 project "glad"
     kind "StaticLib"
     language "C"
+    staticruntime "on"
 
     targetdir ("bin/" .. OutputDir .. "/%{prj.name}")
     objdir ("bin-int/" .. OutputDir .. "/%{prj.name}")
@@ -25,9 +26,5 @@ project "glad"
         symbols "on"
         
     filter "configurations:Release"
-        runtime "Release"
-        optimize "on"
-        
-    filter "configurations:Dist"
         runtime "Release"
         optimize "on"

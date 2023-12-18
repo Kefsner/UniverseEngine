@@ -1,14 +1,15 @@
 // Main application header file.
 #pragma once
-#include "Core.h"
+#include "Universe/Core/PlatformDetection.h"
 #include "Window.h"
 #include "Events/Event.h"
 #include "Events/ApplicationEvent.h"
 #include "LayerStack.h"
+#include "ImGui/ImGuiLayer.h"
 
 namespace Universe {
 
-	class UE_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -30,6 +31,7 @@ namespace Universe {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_IsRunning = true;
 		LayerStack m_LayerStack;
 	};

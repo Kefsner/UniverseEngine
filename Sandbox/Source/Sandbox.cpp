@@ -1,6 +1,8 @@
 #include"uepch.h"
 #include "Universe.h"
 
+#include "imgui.h"
+
 #include <glm/vec3.hpp> // glm::vec3
 #include <glm/vec4.hpp> // glm::vec4
 #include <glm/mat4x4.hpp> // glm::mat4
@@ -43,7 +45,11 @@ class Sandbox : public Universe::Application
 public:
 	Sandbox()
 	{
+		UE_INFO("Creating Sandbox");
+		UE_INFO("Creating ExampleLayer");
 		PushLayer(new ExampleLayer());
+		UE_INFO("Created ExampleLayer");
+		UE_INFO("Created Sandbox");
 	}
 
 	~Sandbox()

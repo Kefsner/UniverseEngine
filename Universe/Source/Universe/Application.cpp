@@ -1,5 +1,7 @@
 #include "UEpch.h"
 #include "Application.h"
+#include "Universe/Core/Assert.h"
+#include "Universe/Core/Base.h"
 #include "Input.h"
 #include "Log.h"
 #include "glm/glm.hpp"
@@ -10,10 +12,14 @@ namespace Universe {
 
 	Application::Application()
 	{
+		UE_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		m_Window->SetEventCallback(UE_BIND_EVENT_FN(OnEvent));
+
+		m_ImGuiLayer = new ImGuiLayer();
+		PushOverlay(m_ImGuiLayer);
 	}
 
 	Application::~Application()
@@ -41,6 +47,7 @@ namespace Universe {
 	void Application::PushOverlay(Layer* layer)
 	{
 		m_LayerStack.PushOverlay(layer);
+		layer->OnAttach();
 	}
 
 	bool Application::OnWindowClose(WindowCloseEvent& e)
@@ -55,6 +62,13 @@ namespace Universe {
 		{
 			for (Layer* layer : m_LayerStack)
 				layer->OnUpdate();
+
+			m_ImGuiLayer->Begin();
+			for (Layer* layer : m_LayerStack)
+			{
+				layer->OnImGuiRender();
+			}
+			m_ImGuiLayer->End();
 
 			m_Window->OnUpdate();
 		}

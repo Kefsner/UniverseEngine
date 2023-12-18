@@ -2,7 +2,7 @@
 // The Create function is implemented in a system dependent way, inside Universe/Platform.
 #pragma once
 #include "UEpch.h"
-#include "Core.h"
+#include "Universe/Core/PlatformDetection.h"
 #include "Universe/Events/Event.h"
 
 namespace Universe {
@@ -23,7 +23,7 @@ namespace Universe {
 	};
 
 	// Abstract interface. The actual window object must be implemented system dependently
-	class UE_API Window
+	class Window
 	{
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;

@@ -4,6 +4,7 @@
 #include "Universe/Application.h"
 #include "Universe/Layer.h"
 #include "Universe/Log.h"
+#include "Universe/ImGui/ImGuiLayer.h"
 
 #include "Universe/Input.h"
 #include "Universe/KeyCodes.h"

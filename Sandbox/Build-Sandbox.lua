@@ -2,6 +2,10 @@ project "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
     cppdialect "C++latest"
+	staticruntime "on"
+
+	targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
+	objdir ("../bin/int/" .. OutputDir .. "/%{prj.name}")
 
 	files { "Source/**.cpp", "Source/**.h" }
 
@@ -10,6 +14,7 @@ project "Sandbox"
 		"../Universe/Source",
 		"../Universe/Vendor/spdlog/include",
 		"../Universe/Vendor/glm",
+		"../Universe/Vendor/imgui",
 	}
 
 	links
@@ -17,23 +22,21 @@ project "Sandbox"
 		"Universe"
 	}
 
-	targetdir ("../bin/" .. OutputDir .. "/%{prj.name}")
-	objdir ("../bin/int/" .. OutputDir .. "/%{prj.name}")
-
     filter "system:windows"
 		systemversion "latest"
 		defines {"UE_PLATFORM_WINDOWS"}
 
 	filter "configurations:Debug"
+		defines "UE_DEBUG"
         runtime "Debug"
-		symbols "On"
+		symbols "on"
 
 	filter "configurations:Release"
+		defines "UE_RELEASE"
         runtime "Release"
-		optimize "On"
-        symbols "On"
+		optimize "on"
 
     filter "configurations:Dist"
-        runtime "Release"
-        optimize "On"
-        symbols "Off"
+		defines "UE_DIST"
+		runtime "Release"
+		optimize "on"
