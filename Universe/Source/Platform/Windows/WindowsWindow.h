@@ -1,7 +1,8 @@
 #pragma once
 #include "Universe/Window.h"
-#include "glad/glad.h"
-#include "GLFW/glfw3.h"
+#include "Universe/Renderer/GraphicsContext.h"
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
 
 namespace Universe {
 
@@ -21,6 +22,7 @@ namespace Universe {
 		inline void* GetNativeWindow() const override { return m_Window; }
 	private:
 		GLFWwindow* m_Window;
+		GraphicsContext* m_Context;
 
 		struct WindowData
 		{

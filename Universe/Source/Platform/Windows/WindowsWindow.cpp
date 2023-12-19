@@ -5,6 +5,11 @@
 #include "Universe/Events/MouseEvent.h"
 #include "Universe/Events/KeyEvent.h"
 
+#include "Platform/OpenGL/OpenGLContext.h"
+#include "Universe/Log.h"
+
+#include "Universe/Core/Assert.h"
+
 namespace Universe {
 
 	static bool s_GLFWInitialized = false;
@@ -22,10 +27,7 @@ namespace Universe {
 
 		if (!s_GLFWInitialized)
 		{
-			if (!glfwInit())
-			{
-				std::cout << "Failed to initialize GLFW" << std::endl;
-			}
+			UE_ASSERT(glfwInit(), "Could not initialize GLFW!")
 
 			s_GLFWInitialized = true;
 		}
@@ -33,8 +35,12 @@ namespace Universe {
 		m_Window = glfwCreateWindow(props.Width, props.Height, props.Title.c_str(), nullptr, nullptr);
 		if (!m_Window)
 		{
-			std::cout << "Failed to create a window" << std::endl;
+			UE_CORE_INFO("Could not create GLFW window!");
 		}
+
+		m_Context = new OpenGLContext(m_Window);
+
+		m_Context->Init();
 
 		glfwMakeContextCurrent(m_Window);
 
@@ -134,11 +140,7 @@ namespace Universe {
 
 	void WindowsWindow::OnUpdate()
 	{
-		/* Render here */
-		glClear(GL_COLOR_BUFFER_BIT);
-
-		/* Swap front and back buffers */
-		glfwSwapBuffers(m_Window);
+		m_Context->SwapBuffers();
 
 		/* Poll for and process events */
 		glfwPollEvents();

@@ -7,6 +7,9 @@
     <Filter Include="Source\Platform">
       <UniqueIdentifier>{6A48A913-D6D3-16D8-DFE4-99CC4BEF72D8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source\Platform\OpenGL">
+      <UniqueIdentifier>{5E160775-4A10-30C7-337D-C6D71F169633}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source\Platform\Windows">
       <UniqueIdentifier>{A4BC056E-10F4-4D05-19FE-B12885B474FE}</UniqueIdentifier>
     </Filter>
@@ -21,6 +24,9 @@
     </Filter>
     <Filter Include="Source\Universe\ImGui">
       <UniqueIdentifier>{801E5359-EC8A-0E54-B57E-A6B121AA30BC}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\Universe\Renderer">
+      <UniqueIdentifier>{3C75708D-289A-BF0D-51E5-A49D3D69BE2B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Vendor">
       <UniqueIdentifier>{935FDCD7-7F01-07AE-68BC-1A0254FD8DFE}</UniqueIdentifier>
@@ -45,6 +51,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Platform\OpenGL\OpenGLContext.h">
+      <Filter>Source\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Platform\Windows\WindowsInput.h">
       <Filter>Source\Platform\Windows</Filter>
     </ClInclude>
@@ -104,6 +113,9 @@
     </ClInclude>
     <ClInclude Include="Source\Universe\MouseButtonCodes.h">
       <Filter>Source\Universe</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Renderer\GraphicsContext.h">
+      <Filter>Source\Universe\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="Source\Universe\Window.h">
       <Filter>Source\Universe</Filter>
@@ -1358,6 +1370,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>Source\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="Source\Platform\Windows\WindowsInput.cpp">
       <Filter>Source\Platform\Windows</Filter>
     </ClCompile>
@@ -1384,6 +1399,9 @@
     </ClCompile>
     <ClCompile Include="Source\Universe\Log.cpp">
       <Filter>Source\Universe</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Universe\Renderer\GraphicsContext.cpp">
+      <Filter>Source\Universe\Renderer</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

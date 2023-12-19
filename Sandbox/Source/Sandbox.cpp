@@ -45,11 +45,7 @@ class Sandbox : public Universe::Application
 public:
 	Sandbox()
 	{
-		UE_INFO("Creating Sandbox");
-		UE_INFO("Creating ExampleLayer");
 		PushLayer(new ExampleLayer());
-		UE_INFO("Created ExampleLayer");
-		UE_INFO("Created Sandbox");
 	}
 
 	~Sandbox()

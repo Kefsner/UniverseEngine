@@ -7,3 +7,7 @@
 [submodule "Universe/Vendor/spdlog"]
 	path = Universe/Vendor/spdlog
 	url = git@github.com:gabime/spdlog.git
+[submodule "Universe/Vendor/imgui"]
+	path = Universe/Vendor/imgui
+	url = git@github.com:ocornut/imgui.git
+	branch = docking

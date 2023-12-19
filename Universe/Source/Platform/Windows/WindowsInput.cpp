@@ -3,6 +3,7 @@
 #include "Universe/Log.h"
 
 #include "Universe/Application.h"
+#include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
 namespace Universe {

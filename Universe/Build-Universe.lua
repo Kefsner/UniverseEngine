@@ -43,7 +43,7 @@ project "Universe"
 
 	filter "system:windows"
         systemversion "latest"
-		defines { "UE_PLATFORM_WINDOWS" }
+		defines { "UE_PLATFORM_WINDOWS", "_CRT_SECURE_NO_WARNINGS" }
 
 
 
