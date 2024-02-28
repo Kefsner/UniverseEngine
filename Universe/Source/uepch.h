@@ -1,4 +1,3 @@
-// Pre compiled headers .cpp
 #pragma once
 
 #include <iostream>

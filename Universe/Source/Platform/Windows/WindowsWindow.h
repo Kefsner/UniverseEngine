@@ -1,5 +1,5 @@
 #pragma once
-#include "Universe/Window.h"
+#include "Universe/Core/Window.h"
 #include "Universe/Renderer/GraphicsContext.h"
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>

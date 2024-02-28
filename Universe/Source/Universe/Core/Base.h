@@ -2,6 +2,7 @@
 
 #ifdef UE_DEBUG
 	#define UE_ENABLE_ASSERTS
+	#define UE_ENABLE_LOGGING
 #endif
 
 #define BIT(x) (1 << x)

@@ -6,7 +6,7 @@
 #include "Universe/Events/KeyEvent.h"
 
 #include "Platform/OpenGL/OpenGLContext.h"
-#include "Universe/Log.h"
+#include "Universe/Core/Log.h"
 
 #include "Universe/Core/Assert.h"
 

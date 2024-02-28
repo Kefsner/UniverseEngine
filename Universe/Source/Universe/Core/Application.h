@@ -1,11 +1,14 @@
 // Main application header file.
 #pragma once
-#include "Universe/Core/PlatformDetection.h"
-#include "Window.h"
-#include "Events/Event.h"
-#include "Events/ApplicationEvent.h"
-#include "LayerStack.h"
-#include "ImGui/ImGuiLayer.h"
+#include "Universe/Events/ApplicationEvent.h"
+#include "Universe/Events/Event.h"
+
+#include "Universe/Core/LayerStack.h"
+#include "Universe/Core/Window.h"
+
+#include "Universe/ImGui/ImGuiLayer.h"
+
+#include "Universe/Renderer/Shader.h"
 
 namespace Universe {
 
@@ -16,14 +19,12 @@ namespace Universe {
 		~Application();
 
 		void Run();
+		void OnEvent(Event& e);
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
 
 		inline Window& GetWindow() { return *m_Window; }
 		static Application& Get() { return *s_Instance; }
-
-		void OnEvent(Event& e);
-
-		void PushLayer(Layer* layer);
-		void PushOverlay(Layer* layer);
 
 	private:
 		static Application* s_Instance;
@@ -36,7 +37,10 @@ namespace Universe {
 		LayerStack m_LayerStack;
 
 		unsigned int m_VertexArray, m_VertexBuffer, m_IndexBuffer;
+		std::unique_ptr<Shader> m_Shader;
 	};
 
+	// By keeping this function outside of the application class,
+	// the client can define it's own application class and create
 	Application* CreateApplication();
 }

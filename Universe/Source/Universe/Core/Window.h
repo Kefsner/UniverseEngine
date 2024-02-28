@@ -2,7 +2,6 @@
 // The Create function is implemented in a system dependent way, inside Universe/Platform.
 #pragma once
 #include "UEpch.h"
-#include "Universe/Core/PlatformDetection.h"
 #include "Universe/Events/Event.h"
 
 namespace Universe {

@@ -1,5 +1,4 @@
 #pragma once
-#include "Universe/Core/PlatformDetection.h"
 #include "Universe/Events/Event.h"
 
 namespace Universe {

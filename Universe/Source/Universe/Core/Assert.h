@@ -1,8 +1,6 @@
 #pragma once
 
-#include "Universe/Core/Base.h"
-#include "Universe/Core/PlatformDetection.h"
-#include "Universe/Log.h"
+#include "Universe/Core/Log.h"
 
 #ifdef UE_ENABLE_ASSERTS
 	#define UE_ASSERT(x, ...) { if(!(x)) { UE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }

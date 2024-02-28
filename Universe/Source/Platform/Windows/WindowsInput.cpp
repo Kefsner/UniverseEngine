@@ -1,8 +1,10 @@
 #include "UEpch.h"
-#include "WindowsInput.h"
-#include "Universe/Log.h"
 
-#include "Universe/Application.h"
+#include "Platform/Windows/WindowsInput.h"
+
+#include "Universe/Core/Application.h"
+#include "Universe/Core/Log.h"
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 

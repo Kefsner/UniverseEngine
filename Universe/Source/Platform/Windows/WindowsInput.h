@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Universe/Input.h"
+#include "Universe/Core/Input.h"
 
 namespace Universe {
 

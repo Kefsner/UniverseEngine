@@ -1,7 +1,9 @@
 #include "UEpch.h"
-#include "OpenGLContext.h"
-#include "Universe/Log.h"
+
 #include "Universe/Core/Assert.h"
+#include "Universe/Core/Log.h"
+
+#include "Platform/OpenGL/OpenGLContext.h"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>

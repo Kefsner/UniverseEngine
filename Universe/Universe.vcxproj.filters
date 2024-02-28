@@ -66,8 +66,8 @@
     <ClInclude Include="Source\Universe.h">
       <Filter>Source</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Universe\Application.h">
-      <Filter>Source\Universe</Filter>
+    <ClInclude Include="Source\Universe\Core\Application.h">
+      <Filter>Source\Universe\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Universe\Core\Assert.h">
       <Filter>Source\Universe\Core</Filter>
@@ -75,11 +75,29 @@
     <ClInclude Include="Source\Universe\Core\Base.h">
       <Filter>Source\Universe\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Universe\Core\PlatformDetection.h">
+    <ClInclude Include="Source\Universe\Core\EntryPoint.h">
       <Filter>Source\Universe\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Universe\EntryPoint.h">
-      <Filter>Source\Universe</Filter>
+    <ClInclude Include="Source\Universe\Core\Input.h">
+      <Filter>Source\Universe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Core\KeyCodes.h">
+      <Filter>Source\Universe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Core\Layer.h">
+      <Filter>Source\Universe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Core\LayerStack.h">
+      <Filter>Source\Universe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Core\Log.h">
+      <Filter>Source\Universe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Core\MouseButtonCodes.h">
+      <Filter>Source\Universe\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Universe\Core\Window.h">
+      <Filter>Source\Universe\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Universe\Events\ApplicationEvent.h">
       <Filter>Source\Universe\Events</Filter>
@@ -96,29 +114,8 @@
     <ClInclude Include="Source\Universe\ImGui\ImGuiLayer.h">
       <Filter>Source\Universe\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Universe\Input.h">
-      <Filter>Source\Universe</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Universe\KeyCodes.h">
-      <Filter>Source\Universe</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Universe\Layer.h">
-      <Filter>Source\Universe</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Universe\LayerStack.h">
-      <Filter>Source\Universe</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Universe\Log.h">
-      <Filter>Source\Universe</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Universe\MouseButtonCodes.h">
-      <Filter>Source\Universe</Filter>
-    </ClInclude>
     <ClInclude Include="Source\Universe\Renderer\GraphicsContext.h">
       <Filter>Source\Universe\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Universe\Window.h">
-      <Filter>Source\Universe</Filter>
     </ClInclude>
     <ClInclude Include="Vendor\glm\glm\common.hpp">
       <Filter>Vendor\glm\glm</Filter>
@@ -1368,6 +1365,7 @@
     <ClInclude Include="Vendor\glm\glm\vector_relational.hpp">
       <Filter>Vendor\glm\glm</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Universe\Renderer\Shader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Platform\OpenGL\OpenGLContext.cpp">
@@ -1382,8 +1380,17 @@
     <ClCompile Include="Source\UEpch.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Universe\Application.cpp">
-      <Filter>Source\Universe</Filter>
+    <ClCompile Include="Source\Universe\Core\Application.cpp">
+      <Filter>Source\Universe\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Universe\Core\Layer.cpp">
+      <Filter>Source\Universe\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Universe\Core\LayerStack.cpp">
+      <Filter>Source\Universe\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Universe\Core\Log.cpp">
+      <Filter>Source\Universe\Core</Filter>
     </ClCompile>
     <ClCompile Include="Source\Universe\ImGui\ImGuiBuild.cpp">
       <Filter>Source\Universe\ImGui</Filter>
@@ -1391,17 +1398,6 @@
     <ClCompile Include="Source\Universe\ImGui\ImGuiLayer.cpp">
       <Filter>Source\Universe\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Universe\Layer.cpp">
-      <Filter>Source\Universe</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Universe\LayerStack.cpp">
-      <Filter>Source\Universe</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Universe\Log.cpp">
-      <Filter>Source\Universe</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Universe\Renderer\GraphicsContext.cpp">
-      <Filter>Source\Universe\Renderer</Filter>
-    </ClCompile>
+    <ClCompile Include="Source\Universe\Renderer\Shader.cpp" />
   </ItemGroup>
 </Project>

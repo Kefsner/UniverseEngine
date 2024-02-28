@@ -1,7 +1,5 @@
 #pragma once
 
-#include "Universe/Core/PlatformDetection.h"
-
 namespace Universe {
 
 	class Input

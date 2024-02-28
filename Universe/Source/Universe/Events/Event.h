@@ -1,5 +1,5 @@
 #pragma once
-#include "Universe/Core/PlatformDetection.h"
+
 #include "Universe/Core/Base.h"
 
 namespace Universe {

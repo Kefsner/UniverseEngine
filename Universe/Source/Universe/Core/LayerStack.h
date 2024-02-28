@@ -1,7 +1,6 @@
 #pragma once
 
-#include "Universe/Core/PlatformDetection.h"
-#include "Universe/Layer.h"
+#include "Universe/Core/Layer.h"
 
 #include <vector>
 
