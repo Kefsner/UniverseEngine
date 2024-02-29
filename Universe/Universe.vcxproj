@@ -146,6 +146,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="Source\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="Source\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="Source\Platform\Windows\WindowsWindow.h" />
@@ -167,7 +168,9 @@
     <ClInclude Include="Source\Universe\Events\KeyEvent.h" />
     <ClInclude Include="Source\Universe\Events\MouseEvent.h" />
     <ClInclude Include="Source\Universe\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="Source\Universe\Renderer\Buffer.h" />
     <ClInclude Include="Source\Universe\Renderer\GraphicsContext.h" />
+    <ClInclude Include="Source\Universe\Renderer\Renderer.h" />
     <ClInclude Include="Source\Universe\Renderer\Shader.h" />
     <ClInclude Include="Vendor\glm\glm\common.hpp" />
     <ClInclude Include="Vendor\glm\glm\detail\_features.hpp" />
@@ -587,6 +590,7 @@
     <ClInclude Include="Vendor\glm\glm\vector_relational.hpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="Source\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="Source\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="Source\Platform\Windows\WindowsWindow.cpp" />
@@ -599,6 +603,8 @@
     <ClCompile Include="Source\Universe\Core\Log.cpp" />
     <ClCompile Include="Source\Universe\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="Source\Universe\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="Source\Universe\Renderer\Buffer.cpp" />
+    <ClCompile Include="Source\Universe\Renderer\Renderer.cpp" />
     <ClCompile Include="Source\Universe\Renderer\Shader.cpp" />
   </ItemGroup>
   <ItemGroup>
